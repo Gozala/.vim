@@ -22,13 +22,17 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
+
+let g:fuzzy_matching_limit = 70
+
 " set lines=60 columns=180
-nmap <F5> :FufFile<CR>
-nmap <F6> :FufFile \**<CR>
+nmap <D-j> :FufFile<CR>
+nmap <D-d> :FuzzyFinderTextMate<CR>
 nnoremap <D-o> :CommandT<CR>
 nnoremap <F4> :buffers<CR>:buffer<space>
 cabbr nt NERDTree
-
+"Filetype associations
+au BufNewFile,BufRead *.json    set filetype=javascript
 "Remove MacVim's toolbar
 if has("gui_running")
     set guioptions=egmrt
