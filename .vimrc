@@ -1,5 +1,5 @@
 syntax on
-colorscheme vilight 
+colorscheme vilight
 set nocompatible
 set guifont=monaco:h12
 set number
