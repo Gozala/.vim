@@ -12,10 +12,18 @@ set smartindent
 set incsearch
 set hidden
 set foldmethod=indent
+set ruler                                   "shows line number and column"
+set rulerformat=%l\|%c\ \ \ \ \%p%%         "better ruler format"
+
+"Highlight long lines"
+"au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+
+
 filetype plugin on
 set nofoldenable
 set foldlevel=1
-" Automatically remove trailing spaces
+"Automatically remove trailing spaces"
 autocmd FileType c,cpp,java,php,js,py autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 let g:miniBufExplMapWindowNavVim = 1
@@ -25,19 +33,14 @@ let g:miniBufExplModSelTarget = 1
 
 let g:fuzzy_matching_limit = 70
 
-" set lines=60 columns=180
 nmap <D-j> :FufFile<CR>
 nmap <D-d> :FuzzyFinderTextMate<CR>
 nnoremap <D-o> :CommandT<CR>
 nnoremap <F4> :buffers<CR>:buffer<space>
 cabbr nt NERDTree
-"Filetype associations
+"Filetype associations"
 au BufNewFile,BufRead *.json    set filetype=javascript
-"Remove MacVim's toolbar
-if has("gui_running")
-    set guioptions=egmrt
-endif
-" Dvorak it!
+" Dvorak it!"
 no d h
 no h j
 no t k
@@ -48,7 +51,7 @@ no j d
 no l n
 no L N
 au vimenter * map t k
-" Added benefits
+" Added benefits"
 no - $
 no _ ^
 no N <C-w><C-w>
