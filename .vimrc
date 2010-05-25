@@ -12,8 +12,8 @@ set smartindent
 set incsearch
 set hidden
 set foldmethod=indent
-set ruler                                   "shows line number and column"
-set rulerformat=%l\|%c\ \ \ \ \%p%%         "better ruler format"
+set ruler                                                                       "shows line number and column"
+set rulerformat=%l\|%c\ \ \ \ \%p%%                                             "better ruler format"
 
 "Highlight long lines"
 "au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
