@@ -3,6 +3,8 @@ colorscheme vilight
 set nocompatible
 set guifont=monaco:h12
 set number
+set cursorline                                                                  "Hightlight current line"
+set guicursor+=i:ver10-iCursor
 set wrap
 set expandtab
 set tabstop=4
