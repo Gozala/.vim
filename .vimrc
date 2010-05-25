@@ -34,7 +34,7 @@ let g:miniBufExplModSelTarget = 1
 let g:fuzzy_matching_limit = 70
 
 nmap <D-j> :FufFile<CR>
-nmap <D-d> :FuzzyFinderTextMate<CR>
+" nmap <D-d> :FuzzyFinderTextMate<CR> "
 nnoremap <D-o> :CommandT<CR>
 nnoremap <F4> :buffers<CR>:buffer<space>
 cabbr nt NERDTree
@@ -59,5 +59,5 @@ no T <C-w><C-r>
 no H 8<Down>
 no T 8<Up>
 no D <C-w><C-r>
-nnoremap <space> za
+nnoremap <space> za                             "mapping folding to space"
 
