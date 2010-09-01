@@ -13,7 +13,7 @@ set autoindent
 set smartindent
 set incsearch
 set hidden
-set foldmethod=indent
+set foldmethod=manual                                                           "sets fold method to manual"
 set ruler                                                                       "shows line number and column"
 set rulerformat=%l\|%c\ \ \ \ \%p%%                                             "better ruler format"
 set spell
@@ -25,7 +25,7 @@ au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)                 
 "call matchadd('Operator', '[\=\-\+\|\%\&\<\>\!\?]')                            "Highlight operators"
 filetype plugin on
 set nofoldenable
-set foldlevel=1
+"set foldlevel=1
 "Automatically remove trailing spaces"
 autocmd FileType c,cpp,java,php,js,py autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
