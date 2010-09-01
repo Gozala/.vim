@@ -16,6 +16,7 @@ set hidden
 set foldmethod=indent
 set ruler                                                                       "shows line number and column"
 set rulerformat=%l\|%c\ \ \ \ \%p%%                                             "better ruler format"
+set spell
 
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)                 "Highlight long lines"
 
