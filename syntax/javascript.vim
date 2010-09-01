@@ -71,6 +71,7 @@ else
     syn keyword javaScriptFunction	function
     syn match	javaScriptBraces	   "[{}\[\]]"
     syn match	javaScriptParens	   "[()]"
+    syn match   javaScriptOperators        "[\=\-\+\|\%\&\<\>\!\?\,\;\:\.]"
 endif
 
 syn sync fromstart
@@ -103,10 +104,12 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink javaScriptRepeat		Repeat
   HiLink javaScriptBranch		Conditional
   HiLink javaScriptOperator		Operator
+  HiLink javaScriptOperators		Operators
   HiLink javaScriptType			Type
   HiLink javaScriptStatement		Statement
   HiLink javaScriptFunction		Function
-  HiLink javaScriptBraces		Function
+  HiLink javaScriptBraces		Braces
+  HiLink javaScriptParens               Parens
   HiLink javaScriptError		Error
   HiLink javaScrParenError		javaScriptError
   HiLink javaScriptNull			Keyword
