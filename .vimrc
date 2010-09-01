@@ -21,8 +21,8 @@ set spell
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)                 "Highlight long lines"
 
 
-call matchadd('Braces', '[{}()\[\]]')                                           "Highlight braces"
-call matchadd('Operators', '[\=\-\+\|\%\&\<\>\!\?]')                            "Highlight operators"
+"call matchadd('Braces', '[{}()\[\]]')                                           "Highlight braces"
+"call matchadd('Operator', '[\=\-\+\|\%\&\<\>\!\?]')                            "Highlight operators"
 filetype plugin on
 set nofoldenable
 set foldlevel=1
