@@ -54,7 +54,7 @@ syn keyword javaScriptLabel		case default
 syn keyword javaScriptException		try catch finally throw
 syn keyword javaScriptMessage		alert confirm prompt status
 syn keyword javaScriptGlobal		self window top parent exports require this arguments
-syn keyword javaScriptMember		document event location
+syn keyword javaScriptMember		document event location prototype constructor
 syn keyword javaScriptDeprecated	escape unescape
 syn keyword javaScriptReserved		abstract boolean byte char class debugger double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile 
 
