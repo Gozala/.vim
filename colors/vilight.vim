@@ -9,10 +9,21 @@ endif
 
 let g:colors_name="twilight"
 
+if version >= 700
+  hi CursorLine     guibg=#212121
+  hi CursorColumn   guibg=#666666
+  hi MatchParen     guifg=#D4FFFF           guibg=#001804     gui=bold
+  hi Pmenu          guifg=#FFFFFF           guibg=#323232
+  hi PmenuSel       guifg=#FFFFFF           guibg=#67B053
+  hi ColorColumn                            guibg=#202020
+endif
+
+hi SignColumn      guifg=#A6E22E            guibg=#232526
+
 hi Normal           guifg=#F8F8F8           guibg=#141414
 hi Cursor           guifg=#141414           guibg=#FFE300
 hi iCursor          guifg=NONE              guibg=#7F73DB
-hi CursorLine       guifg=NONE              guibg=#1A1A1A
+hi CursorLine       guifg=NONE              guibg=#262626
 hi Directory        guifg=#8F9D6A           guibg=#141414
 hi VertSplit        guifg=#d5dcee           guibg=#d5dcee
 hi Folded           guifg=#888888           guibg=#282828
@@ -20,11 +31,12 @@ hi FoldColumn       guifg=#cf6a4c           guibg=#141414       gui=italic
 hi vimFold          guifg=#f8f8f8           guibg=#282828       gui=italic
 hi IncSearch        guifg=#4f94cd           guibg=#f8f8f8
 hi LineNr           guifg=#666666           guibg=#242424
+"hi LineNr           guifg=#888888           guibg=#E3E3E3"
 hi ModeMsg          guifg=#f9ee98           guibg=#141414
 hi MoreMsg          guifg=#f9ee98           guibg=#141414
 hi NonText          guifg=#665f57           guibg=#141414
 hi Search           guifg=NONE              guibg=#614C62       gui=underline
-hi StatusLine       guifg=#0e2231           guibg=#8693a5
+hi StatusLine       guifg=#242424           guibg=#666666
 hi StatusLineNC     guifg=#0e2231           guibg=#8693a5
 hi Visual           guifg=NONE              guibg=#614C62       gui=italic
 hi WildMenu         guifg=#9b70f3           guibg=#0e2231
@@ -33,6 +45,9 @@ hi ErrorMsg         guifg=#cf6a4c           guibg=NONE
 hi WarningMsg       guifg=#cf6a4c           guibg=NONE
 hi Title            guifg=#cf6a4c           guibg=#141414
 
+"Invisible character colors
+hi SpecialKey       guifg=#535353
+hi NonText          guifg=#535353           guibg=NONE
 "Syntax hilight groups"
 
 hi Comment          guifg=#626262                               gui=italic
