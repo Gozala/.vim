@@ -38,6 +38,7 @@ set laststatus=2                                                                
 set encoding=utf-8                                                              "Set default encoding to UTF-8"
 set scrolloff=5                                                                 "Minimal number of screen lines to keep above and below the cursor"
 set undofile                                                                    "Keep undo files for cross session undo / redo"
+set directory=~/.local/tmp,/var/tmp,/tmp                                        "Set directory to save swap files in."
 
 set textwidth=80
 "(function(l) { var $ = 'set colorcolumn=', n = 0; while(++n < l) $ += '+' + n + ','; return $ })(100)"
