@@ -106,7 +106,7 @@ nnoremap k gk
 "strip all trailing whitespace in the current file"
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 inoremap <M-Space> <ESC>
-inoremap jj <ESC>
+"inoremap jj <ESC>"
 nmap <leader>' :set relativenumber!<cr>
 nmap <leader>" :set number!<cr>
 
