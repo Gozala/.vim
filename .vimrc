@@ -62,7 +62,7 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
-nnoremap <D-o> :CommandT<CR>
+" nnoremap <D-o> :CommandT<CR>
 nnoremap <F4> :buffers<CR>:buffer<space>
 cabbr nt NERDTree
 "Filetype associations"
