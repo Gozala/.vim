@@ -5,7 +5,7 @@ set hlsearch                                                                    
 set nocompatible                                                                "Disable backwards compatibility with vi"
 set guifont=monaco:h12
 
-"set number                                                                      "Display line numbers"
+"set number                                                                     "Display line numbers"
 set relativenumber                                                              "Relative line numbers"
 
 set cursorline                                                                  "Highlight current line"
@@ -19,11 +19,12 @@ set softtabstop=2
 
 set autoindent                                                                  "Enable auto indentation"
 set smartindent                                                                 "Enable smart indentation"
+
 set incsearch
 set hidden
 set foldmethod=manual                                                           "sets fold method to manual"
 set ruler                                                                       "shows line number and column"
-set rulerformat=Line:%l\ Column:%c                                              "better ruler format"
+set rulerformat=%l\:%c                                                          "better ruler format"
 
 set showmode                                                                    "Display mode your in below"
 set showcmd                                                                     "Display commands executed"
