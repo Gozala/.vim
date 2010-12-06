@@ -41,22 +41,24 @@ syn match   javaScriptSpecialCharacter "'\\.'"
 syn match   javaScriptNumber	       "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
 syn region  javaScriptRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[gi]\{0,2\}\s*$+ end=+/[gi]\{0,2\}\s*[;.,)\]}]+me=e-1 contains=@htmlPreproc oneline
 
-syn keyword javaScriptConditional	if else switch
-syn keyword javaScriptRepeat		while for each do in
-syn keyword javaScriptBranch		break continue
-syn keyword javaScriptOperator		new delete instanceof typeof 
-syn keyword javaScriptType		Array Boolean Date Function Number Object String RegExp
-syn keyword javaScriptStatement		return with
-syn keyword javaScriptBoolean		true false
-syn keyword javaScriptNull		null undefined
-syn keyword javaScriptIdentifier	var let const
-syn keyword javaScriptLabel		case default
-syn keyword javaScriptException		try catch finally throw
-syn keyword javaScriptMessage		alert confirm prompt status
-syn keyword javaScriptGlobal		self window top parent exports require this arguments
-syn keyword javaScriptMember		document event location prototype constructor
-syn keyword javaScriptDeprecated	escape unescape
-syn keyword javaScriptReserved		abstract boolean byte char class debugger double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile 
+syn keyword javaScriptNativeFunction    decodeURI decodeURIComponent encodeURI encodeURIComponent eval isFinite isNaN parseFloat parseInt
+syn keyword javaScriptConditional       if else switch
+syn keyword javaScriptRepeat            while for each do in
+syn keyword javaScriptBranch            break continue
+syn keyword javaScriptOperator          new delete instanceof typeof
+syn keyword javaScriptType              Array Boolean Date Function Number Object String RegExp
+syn keyword javaScriptError             Error StopIteration EvalError RangeError ReferenceError SyntaxError TypeError URIError
+syn keyword javaScriptStatement         return yield with
+syn keyword javaScriptBoolean           true false
+syn keyword javaScriptNull              null undefined NaN Infinity
+syn keyword javaScriptIdentifier        var let const
+syn keyword javaScriptLabel             case default
+syn keyword javaScriptException         try catch finally throw
+syn keyword javaScriptMessage           alert confirm prompt status
+syn keyword javaScriptGlobal            self window top parent exports console require Math Iterator
+syn keyword javaScriptMember            this arguments document event location prototype constructor __iterator__ __defineGetter__ __defineSetter__ __proto__
+syn keyword javaScriptReserved          class enum extends super const export import implements private public interface package protected static
+syn keyword javaScriptDebug             debugger
 
 if exists("javaScript_fold")
     syn match	javaScriptFunction	"\<function\>"
@@ -108,6 +110,7 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink javaScriptType			Type
   HiLink javaScriptStatement		Statement
   HiLink javaScriptFunction		Function
+  HiLink javaScriptNativeFunction       javaScriptSpecial
   HiLink javaScriptBraces		Braces
   HiLink javaScriptParens               Parens
   HiLink javaScriptError		Error
