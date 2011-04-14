@@ -52,7 +52,6 @@ set listchars=tab:▸\ ,eol:¬
 
 "call matchadd('Braces', '[{}()\[\]]')                                          "Highlight braces"
 "call matchadd('Operator', '[\=\-\+\|\%\&\<\>\!\?]')                            "Highlight operators"
-filetype plugin on
 set nofoldenable
 "set foldlevel=1
 "Automatically remove trailing spaces"
@@ -62,6 +61,11 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
+
+call pathogen#runtime_append_all_bundles()                                      "Start coffee script"
+let coffee_compile_on_save = 1                                                  "Generate js on file save"
+filetype off
+filetype plugin on                                                              "Filetype plugins"
 
 " nnoremap <D-o> :CommandT<CR>
 nnoremap <F4> :buffers<CR>:buffer<space>
