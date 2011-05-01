@@ -67,3 +67,5 @@ es5
 forin
 maxlen
 instanceof
+extendable
+extendables
