@@ -25,6 +25,7 @@ set hidden
 set foldmethod=manual                                                           "sets fold method to manual"
 set ruler                                                                       "shows line number and column"
 set rulerformat=%l\:%c                                                          "better ruler format"
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l\:%c%V%)
 
 set showmode                                                                    "Display mode your in below"
 set showcmd                                                                     "Display commands executed"
