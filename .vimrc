@@ -49,7 +49,7 @@ set formatoptions=qrn1
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:˺,nbsp:█
 
 "call matchadd('Braces', '[{}()\[\]]')                                          "Highlight braces"
 "call matchadd('Operator', '[\=\-\+\|\%\&\<\>\!\?]')                            "Highlight operators"
