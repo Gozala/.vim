@@ -65,7 +65,6 @@ let g:miniBufExplModSelTarget = 1
 
 call pathogen#runtime_append_all_bundles()                                      "Start coffee script"
 let coffee_compile_on_save = 1                                                  "Generate js on file save"
-filetype off
 filetype plugin on                                                              "Filetype plugins"
 
 " nnoremap <D-o> :CommandT<CR>
