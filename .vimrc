@@ -51,6 +51,7 @@ set formatoptions=qrn1
 set list
 set listchars=tab:▸\ ,eol:¬,trail:˺,nbsp:█
 
+set switchbuf=usetab,newtab                                                     "switching to the existing tab if the buffer is open, or creating a new one"
 "call matchadd('Braces', '[{}()\[\]]')                                          "Highlight braces"
 "call matchadd('Operator', '[\=\-\+\|\%\&\<\>\!\?]')                            "Highlight operators"
 set nofoldenable
@@ -114,4 +115,3 @@ inoremap <M-Space> <ESC>
 "inoremap jj <ESC>"
 nmap <leader>' :set relativenumber!<cr>
 nmap <leader>" :set number!<cr>
-
